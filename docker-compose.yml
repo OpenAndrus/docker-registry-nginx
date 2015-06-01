@@ -1,0 +1,14 @@
+backend:
+  image: registry:2.0
+  ports:
+    - 5000
+  environment:
+    - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/data
+  volumes:
+    - /var/lib/docker-registry:/data
+frontend:
+  build: nginx
+  links:
+    - backend
+  ports:
+    - 127.0.0.1:5000:80
