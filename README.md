@@ -1,6 +1,6 @@
 # docker-registry-nginx
 
-A simple way of setting up [docker-registry] (2.0) behind a nginx reverse proxy using docker-compose.
+A simple way of setting up [docker-registry] v2 behind a nginx reverse proxy using docker-compose.
 
 ## Why?
 I want to secure my docker registry with tools I already know, like nginx, which provides for IP restrictions,
