@@ -33,8 +33,13 @@ htpasswd -c nginx/.htpasswd exampleuser
 
 You will be prompted for a password.
 
+### Add certificates
+Create a self-signed certificate or add your existing certificates to the `nginx` directory and update the `Dockerfile` accordingly.
+
 ## Disclaimer
-The nginx config files were copied and adapted from the [registry project source code].
+* The nginx config files were copied and adapted from the [registry project source code].
+
+* Basic authentication only works when TLS/SSL is enabled.
 
 [docker-registry]: https://github.com/docker/distribution#more-about-registry-20
 [Roll your own Docker registry]: http://www.kf-interactive.com/blog/roll-your-own-docker-registry-with-docker-compose-supervisor-and-nginx/
